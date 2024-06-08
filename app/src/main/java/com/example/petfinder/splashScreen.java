@@ -19,14 +19,14 @@ public class splashScreen extends AppCompatActivity {
             @Override
             public void run() {
                 try {
-                    synchronized(this) {
+                    synchronized (this) {
                         wait(3500);
                     }
-                }
-                catch (InterruptedException ex) {
+                } catch (InterruptedException ex) {
                 }
                 finish();
-                Intent intent = new Intent (splashScreen.this, Login.class); startActivity(intent);
+                Intent intent = new Intent(splashScreen.this, Login.class);
+                startActivity(intent);
             }
         };
         mSplashThread.start();
